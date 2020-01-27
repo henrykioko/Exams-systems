@@ -1,0 +1,82 @@
+*{
+
+	margin:0;
+	padding:2px;
+	box-sizing: border-box;
+	border-radius: 25%;
+
+}
+
+body{
+
+	font-family: "lato", san-serif;
+
+	font-weight:400;
+	font-size:16px;
+	line-height: 1.7;
+	color: red;
+	padding: 30px;
+		background-image: linear-gradient(to right bottom,
+		rgba(126, 213, 111, .6),
+		rgba(40, 180, 131, .6)),
+	url(imag/bono.jpg);
+	background-size: cover;
+	background-position:top;
+	/*clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);*/
+	/*border-radius: 50%;*/
+}
+
+
+.btn{
+	animation-name: moveinleft;
+	animation-duration: 2s;
+	animation-timing-function: ease-in; 
+	color: fff;
+	size: 50px;
+	border-radius: 40%;
+	background-color: green;
+}
+}
+.btn:hover{
+	animation: moveinright 1s ease-out;
+}
+.text-box{	
+	position: relative;
+	top: 50%;
+	left: 25%;
+	text-align: center;
+	padding: 30px;
+}
+
+
+@keyframes moveinleft{
+	
+	0%{
+		opacity: 0;
+		transform: translateX(-100px);
+	}		
+	80%{
+		transition: translateX(10px);
+
+	}
+100%{
+	opacity: 1;
+	transform: translateX(10px);
+}
+}
+
+
+
+.btn:hover::after{
+	transform: scale(1.4);
+	opacity: 0;
+
+}
+
+.animated-btn{
+
+	animation: moveinbottom 2s ease-in .7s;
+
+	animation-fill-mode: backwards;
+}
+
